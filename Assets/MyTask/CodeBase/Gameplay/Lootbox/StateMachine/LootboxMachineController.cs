@@ -13,11 +13,6 @@ namespace MyTask.CodeBase.Gameplay.Lootbox.StateMachine
 {
     public class LootboxMachineController : MonoBehaviourExtBind
     {
-        public Button StartButton => _startButton;
-        public Button StopButton => _stopButton;
-        public Button ExitButton => _exitButton;
-
-
         [SerializeField] private Button _startButton;
         [SerializeField] private Button _stopButton;
         [SerializeField] private Button _exitButton;
@@ -33,32 +28,33 @@ namespace MyTask.CodeBase.Gameplay.Lootbox.StateMachine
 
             Settings.Fsm.Start("IdleState");
 
-            StartButton.onClick.AddListener(() =>
+            Model.EventManager.AddAction("OnStartClick", () =>
             {
                 Settings.Fsm.Change("Scrolling");
             });
-
-            StopButton.onClick.AddListener(() =>
+            
+            Model.EventManager.AddAction("OnStopClick", () =>
             {
                 Settings.Fsm.Change("Stopping");
             });
 
-            StopButton.interactable = false;
+            Model.Set("BtnStartEnable", true);
+            Model.Set("BtnStopEnable", false);
         }
 
         public async UniTask StartScroll()
         {
-            StopButton.interactable = false;
+            Model.Set("BtnStopEnable", false);
             await _scrollController.StartScroll();
             await UniTask.Delay(TimeSpan.FromSeconds(3));
-            StopButton.interactable = true;
+            Model.Set("BtnStopEnable", true);
         }
 
         public async UniTask StopScroll()
         {
-            StopButton.interactable = false;
+            Model.Set("BtnStopEnable", false);
             await _scrollController.StopScroll();
-            StartButton.interactable = true;
+            Model.Set("BtnStartEnable", true);
         }
 
     }

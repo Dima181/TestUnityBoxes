@@ -20,8 +20,8 @@ namespace MyTask.CodeBase.Gameplay.Lootbox.StateMachine.States
         [Enter]
         private async UniTask EnterThisAsync()
         {
-            _controller.StartButton.interactable = false;
-            _controller.ExitButton.interactable = false;
+            Model.Set("BtnStartEnable", false);
+            Model.Set("BtnExitEnable", false);
             await _controller.StartScroll();
         }
     }

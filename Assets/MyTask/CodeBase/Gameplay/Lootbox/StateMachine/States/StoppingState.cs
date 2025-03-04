@@ -19,8 +19,8 @@ namespace MyTask.CodeBase.Gameplay.Lootbox.StateMachine.States
         [Enter]
         private async UniTask EnterThisAsync()
         {
-            _controller.StopButton.interactable = false;
-            _controller.ExitButton.interactable = false;
+            Model.Set("BtnStopEnable", false);
+            Model.Set("BtnExitEnable", false);
             await _controller.StopScroll();
             Settings.Fsm.Change("IdleState");
         }

@@ -253,6 +253,7 @@ GameObject:
   - component: {fileID: 7070549773579839192}
   - component: {fileID: 3536042198840352121}
   - component: {fileID: 4266960200553709353}
+  - component: {fileID: 2489247577750301831}
   m_Layer: 0
   m_Name: Exit Button
   m_TagString: Untagged
@@ -361,6 +362,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &2489247577750301831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2095290954754859284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8182fff6322be2a4392c8ad660ffb198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalModel: 0
+  buttonName: Exit
+  enableField: BtnExitEnable
+  defaultEnable: 1
+  keyField: 
+  key: 
+  onKeyPress: 0
+  isFsmUI: 0
 --- !u!1 &2794431371693070441
 GameObject:
   m_ObjectHideFlags: 0
@@ -691,7 +712,7 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
-  m_PresetInfoIsWorld: 1
+  m_PresetInfoIsWorld: 0
 --- !u!114 &299314425516086458
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -922,6 +943,7 @@ GameObject:
   - component: {fileID: 2347765170937515942}
   - component: {fileID: 6678572368757086627}
   - component: {fileID: 5327068687065732315}
+  - component: {fileID: 28010251671038756}
   m_Layer: 5
   m_Name: Stop Button
   m_TagString: Untagged
@@ -1031,6 +1053,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &28010251671038756
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7039625550182579961}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8182fff6322be2a4392c8ad660ffb198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalModel: 0
+  buttonName: Stop
+  enableField: BtnStopEnable
+  defaultEnable: 0
+  keyField: 
+  key: 
+  onKeyPress: 0
+  isFsmUI: 0
 --- !u!1 &7714882872694183701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1120,6 +1162,7 @@ GameObject:
   - component: {fileID: 7146345355274736096}
   - component: {fileID: 2309388893398918809}
   - component: {fileID: 8878590783595753233}
+  - component: {fileID: 8023481445948072228}
   m_Layer: 5
   m_Name: Start Button
   m_TagString: Untagged
@@ -1229,6 +1272,26 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8023481445948072228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8120122898024904574}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8182fff6322be2a4392c8ad660ffb198, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  globalModel: 0
+  buttonName: Start
+  enableField: BtnStartEnable
+  defaultEnable: 1
+  keyField: 
+  key: 
+  onKeyPress: 0
+  isFsmUI: 0
 --- !u!1 &8433999228003224363
 GameObject:
   m_ObjectHideFlags: 0

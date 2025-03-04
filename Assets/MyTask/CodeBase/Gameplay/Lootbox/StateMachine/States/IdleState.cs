@@ -17,9 +17,9 @@ namespace MyTask.CodeBase.Gameplay.Lootbox.StateMachine.States
         [Enter]
         public void Enter()
         {
-            _controller.StartButton.interactable = true;
-            _controller.ExitButton.interactable = true;
-            _controller.StopButton.interactable = false;
+            Model.Set("BtnStartEnable", true);
+            Model.Set("BtnExitEnable", true);
+            Model.Set("BtnStopEnable", false);
         }
     }
 }
